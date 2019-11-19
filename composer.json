@@ -1,5 +1,5 @@
 {
-    "name": "ism/Template",
+    "name": "ism/template",
     "description": "Package is a template service wrapper",
     "type": "project",
     "keywords": ["template", "composer", "package", "ism"],
