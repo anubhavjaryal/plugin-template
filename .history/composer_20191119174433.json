@@ -3,6 +3,7 @@
     "description": "Package is a template service wrapper",
     "type": "project",
     "keywords": ["template", "composer", "package", "ism"],
+    "license": "DBAD",
     "authors": [
         {
             "name": "Anubhav Jaryal",

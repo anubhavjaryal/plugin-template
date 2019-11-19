@@ -1,8 +1,9 @@
 {
-    "name": "ism/template",
+    "name": "ism/Template",
     "description": "Package is a template service wrapper",
     "type": "project",
     "keywords": ["template", "composer", "package", "ism"],
+    "license": "DBAD",
     "authors": [
         {
             "name": "Anubhav Jaryal",
@@ -14,6 +15,7 @@
             "Ism\\Template\\": "src/"}
     },
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "ism/filter": "dev-master"
     }
 }
