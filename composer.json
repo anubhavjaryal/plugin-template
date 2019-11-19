@@ -15,7 +15,6 @@
             "Ism\\Template\\": "src/"}
     },
     "require": {
-        "php": ">=7.1",
-        "ism/filter": "dev-master"
+        "php": ">=7.1"
     }
 }
