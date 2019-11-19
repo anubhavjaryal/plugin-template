@@ -1,0 +1,21 @@
+{
+    "name": "ism/Template",
+    "description": "Package is a template service wrapper",
+    "type": "project",
+    "keywords": ["template", "composer", "package", "ism"],
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "Anubhav Jaryal",
+            "email": "anubhavjaryal@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ism\\Template\\": "src/"}
+    },
+    "require": {
+        "php": ">=7.1",
+        "ism/filter": "dev-master"
+    }
+}
