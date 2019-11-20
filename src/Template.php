@@ -2,7 +2,7 @@
 
 namespace Ism\Template;
 
-class Template extends Illuminate\Database\Eloquent\Model {
+class Template extends \Illuminate\Database\Eloquent\Model {
 	protected $table = 'template_map';
 	protected $fillable = [
 			'society_id',
