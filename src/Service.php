@@ -33,6 +33,14 @@ class Controller extends BaseController {
 		return $res ? ( $res->delete() ? Util::response(true, "Deleted successfully") : Util::response(false, "Not successfully") ): Util::response(false, "Not Found");
 	}
 	//
+	public function generateTemplate($societyId, $data, $action, $subaction ){
+		if(($template = Template::getTemplate($societyId, $action, $subaction))){
+			return Adaptor::generateTemplate($template, $data);
+		}else{
+			return Util::response(false, "No template found, use default");
+		}
+	}
+	//
 	private function validate($params, $isUpdate=false, $reqNew = []){
 		$reqd = $reqNew ?? ['society_id', 'action', 'sub_action', 'template_id'];
 		if($isUpdate){
