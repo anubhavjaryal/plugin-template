@@ -11,7 +11,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ism\\Template\\": "src/"}
+            "Ism\\Template\\": "src/",
+            "Ism\\Template\\Console\\": ""
+        }
     },
     "require": {
         "php": ">=7.1"

@@ -6,7 +6,7 @@ class Adaptor {
 	const URI_GENERATE_TEMPLATE = 'v1/processtemplate';
 
 	public static function getTemplateHost(){
-		return env("TEMPLATE_URL", "localhost/notify/public");
+		return env("TEMPLATE_URL", "localhost/notify/public/");
 	}
 
 	public static function generateTemplate(Template $template, array $data) {
