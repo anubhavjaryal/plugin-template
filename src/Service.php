@@ -46,6 +46,6 @@ class Service extends BaseController {
 		if($isUpdate){
 			$reqd[] = 'id';
 		}
-		return Util::validateParameters($reqd, $params);
+		return ($r = Util::validateParameters($reqd, $params)) ? $r : true ;
 	}
 }
