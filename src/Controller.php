@@ -2,6 +2,7 @@
 
 namespace Ism\Template;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Input;
 
 class Controller extends BaseController {
 	public function get(){
