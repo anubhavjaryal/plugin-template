@@ -53,4 +53,10 @@ class Util {
 			'data' => $data
 		];
 	}
+	public static function getSocietyId(){
+        return Session::get('societyId');
+	}
+	public static function getUserId(){
+        return Session::get('userId');
+    }
 }
