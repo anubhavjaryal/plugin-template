@@ -48,7 +48,7 @@ class Util {
 	}
 	public static function response($condition, $message = null, $data = null, $metadata = [], $customizedStatus = null) {
 		return [
-			'status'=> $customizedStatus ?? ($condition ? Constant::SUCCESS : Constant::ERROR),
+			'status'=> $customizedStatus ?? ($condition ? 'success' : 'error'),
 			'message' => $message,
 			'metadata' => $metadata,
 			'data' => $data
