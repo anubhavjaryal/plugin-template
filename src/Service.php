@@ -3,7 +3,7 @@
 namespace Ism\Template;
 use Illuminate\Routing\Controller as BaseController;
 
-class Controller extends BaseController {
+class Service extends BaseController {
 	public function get($params){
 		if(($r = $this->validate($params, false, ['society_id']))!== true){
 			return Util::response(false, "Some fields are not provided", $r);

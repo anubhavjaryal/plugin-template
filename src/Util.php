@@ -1,6 +1,7 @@
 <?php
 
 namespace Ism\Template;
+use Illuminate\Support\Facades\Session;
 
 class Util {
 	public static function validateParameters($req, $param) {
