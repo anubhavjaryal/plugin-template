@@ -26,7 +26,12 @@ class Controller extends BaseController {
 		return (new Service)->delete($params);
 	}
 	public function generate(){
-		$params = Input::only('action', 'sub_action', 'data');
-		return (new Service)->generateTemplate(Util::getSocietyId(), $params['data'], $params['action'], $params['sub_action']);
+		$params = Input::only('action', 'sub_action', 'data', 'html');
+		$res = (new Service)->generateTemplate(Util::getSocietyId(), $params['data'], $params['action'], $params['sub_action']);
+		if($params['html']){
+			return $res['data'][$params['html']] ?? $res;
+		}else{
+			return $res;
+		}
 	}
 }
