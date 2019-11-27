@@ -13,10 +13,14 @@ class Util {
 		}
 		return $arr;
 	}
-	public static function getServiceAuthHeaders() {
+	public static function getServiceAuthHeaders($apikey = null) {
+		if ($apikey == null) {
+			$apikey = base64_encode ( env ( 'APP_SERVICE_NAME', 'LOCALHOST' ) . ":" . env ( 'APP_KEY', 'LOCALHOST' ) );
+		}
 		return [ 
 				'Content-type: application/json',
-				'Authorization: Basic ' . base64_encode ( env ( 'APP_SERVICE_NAME', 'LOCALHOST' ) . ":" . env ( 'APP_KEY', 'LOCALHOST' ) ) 
+				'Authorization: Basic ' . $apikey,
+				'requested-by: ' . Constant::getUserId () 
 		];
 	}
 	public static function postWebService($url, $data, $serviceHeader = [], $returnTransfer = true, $sslVerifyPeer = false, $timeout = 60) {
