@@ -14,7 +14,7 @@ class Adaptor {
 		$d['customer_id'] = $template->society_id;
 		$d['id'] = $template->id;
 		$d['data'] = $data;
-		$res = Util::postWebService($url, $data, Util::getServiceAuthHeaders(env('TEMPLATE_AUTH')));
+		$res = Util::postWebService($url, $d, Util::getServiceAuthHeaders(env('TEMPLATE_AUTH')));
 		if($res && ($res = json_decode($res, true))){
 			return $res;
 		}
