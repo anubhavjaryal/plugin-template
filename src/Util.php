@@ -20,7 +20,7 @@ class Util {
 		return [ 
 				'Content-type: application/json',
 				'Authorization: Basic ' . $apikey,
-				'requested-by: ' . Constant::getUserId () 
+				'requested-by: ' . self::getUserId()
 		];
 	}
 	public static function postWebService($url, $data, $serviceHeader = [], $returnTransfer = true, $sslVerifyPeer = false, $timeout = 60) {
