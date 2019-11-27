@@ -12,7 +12,7 @@ class Adaptor {
 	public static function generateTemplate(Template $template, array $data) {
 		$url = self::getTemplateHost().self::URI_GENERATE_TEMPLATE;
 		$d['customer_id'] = $template->society_id;
-		$d['id'] = $template->society_id;
+		$d['id'] = $template->id;
 		$d['data'] = $data;
 		$res = Util::postWebService($url, $data, Util::getServiceAuthHeaders(env('TEMPLATE_AUTH')));
 		if($res && ($res = json_decode($res, true))){
