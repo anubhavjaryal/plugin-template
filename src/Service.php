@@ -34,10 +34,10 @@ class Service extends BaseController {
 	}
 	//
 	public function generateTemplate($societyId, $data, $action, $subaction ){
-		if(($template = Template::getTemplate($societyId, $action, $subaction))){
+		if(($template = ($template = Template::getTemplate($societyId, $action, $subaction)) ? $template : (Template::getDefaultTemplate($action)))){
 			return Adaptor::generateTemplate($template, $data);
 		}else{
-			return Util::response(false, "No template found, use default");
+			return Util::response(false, "No template found");
 		}
 	}
 	//

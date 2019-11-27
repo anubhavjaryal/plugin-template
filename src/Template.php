@@ -13,4 +13,7 @@ class Template extends \Illuminate\Database\Eloquent\Model {
 	public static function getTemplate($societyId, $action, $subaction){
 		return self::where('society_id', $societyId)->where('action', $action)->where('sub_action', $subaction)->first();
 	}
+	public static function getDefaultTemplate($action){
+		return self::where('action', $action)->where('sub_action', 'DEFAULT')->first();
+	}
 }
