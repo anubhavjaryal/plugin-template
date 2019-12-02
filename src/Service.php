@@ -7,7 +7,7 @@ class Service  {
 		if(($r = $this->validate($params, false, ['society_id']))!== true){
 			return Util::response(false, "Some fields are not provided", $r);
 		}
-		$ts = Template::where('society_id', $r['society_id'])->get();
+		$ts = Template::where('society_id', $params['society_id'])->get();
 		return Util::response(true, sizeof($ts)." found.", $ts);
 	}
 	public function add($params){
