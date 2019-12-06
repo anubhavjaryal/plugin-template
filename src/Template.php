@@ -10,6 +10,7 @@ class Template extends \Illuminate\Database\Eloquent\Model {
 			'sub_action',
 			'template_id'
 	];
+	public $timestamps = false;
 	public static function getTemplate($societyId, $action, $subaction){
 		return self::where('society_id', $societyId)->where('action', $action)->where('sub_action', $subaction)->first();
 	}
